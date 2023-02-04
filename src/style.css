@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Didatic Gothic', sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  background: #000;
+}
+
+.page-wrapper {
+  height: 100vh;
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: 2.5fr 2.5fr 1.25fr 1.25fr 2.5fr;
+  grid-template-rows: 5rem auto;
+  grid-template-areas:
+    'header-1 header-1 header-1 header-1 header-2'
+    'banner banner mondrian mondrian text'
+    'rietveld red mondrian mondrian text'
+    'rietveld red black white text';
+}
+
+.pad-2 {
+  padding: 2rem;
+}
+
+.header-1 {
+  background: white;
+  grid-area: header-1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  width: 33%;
+  height: 2rem;
+}
+
+.logo img {
+  margin-left: 2rem;
+}
+
+.header-1 nav {
+  width: 33%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-1 nav a,
+.header-2 a {
+  color: black;
+  text-decoration: none;
+}
+
+.header-2 {
+  background: yellow;
+  grid-area: header-2;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+.cart {
+  width: 8.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cart p {
+  width: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.cart p span {
+  background: black;
+  color: white;
+  margin-left: 0.5rem;
+  display: block;
+  width: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.banner {
+  background: white;
+  grid-area: banner;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.banner-txt,
+.banner-img {
+  width: 50%;
+  padding: 1rem 1.5rem;
+}
+
+.banner-txt,
+.description,
+.price {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner-txt h1 {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+
+.banner-txt h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 1.5rem 0 0.5rem 0;
+  padding: 0;
+}
+
+.banner-txt h4 {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-txt a {
+  color: white;
+  background-color: #3963a4;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  display: flex;
+  margin-top: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.banner-img img {
+  width: 100%;
+  max-width: 19.5rem;
+  height: auto;
+}
+
+.mondrian {
+  background: #3963a4;
+  grid-area: mondrian;
+}
+
+.mondrian h2,
+.mondrian p {
+  color: white;
+}
+
+.text {
+  background: white;
+  grid-area: text;
+}
+
+.rietveld {
+  background: yellow;
+  grid-area: rietveld;
+}
+
+.rietveld img,
+.mondrian img {
+  width: 100%;
+  height: auto;
+}
+
+.rietveld img {
+  max-width: 16.5rem;
+}
+
+.red {
+  background: red;
+  grid-area: red;
+}
+
+.white {
+  background: white;
+  grid-area: white;
+}
+
+.black {
+  background: black;
+  color: white;
+  grid-area: black;
+}
+
+.white,
+.black {
+  min-height: 14rem;
+}
